@@ -221,7 +221,7 @@ docker exec spark-master spark-submit \
 |---|-------|----------|--------|
 | 1 | Build Maven | `mvn clean package` |  Génère le JAR |
 | 2 | Docker Up | `docker-compose up -d` |  Démarre les services |
-| 3 | Créer répertoires HDFS | `docker exec namenode hdfs dfs -mkdir -p /data/orders1` | ✅ Répertoires créés |
+| 3 | Créer répertoires HDFS | `docker exec namenode hdfs dfs -mkdir -p /data/orders1` |  Répertoires créés |
 | 4 | Safe Mode | `docker exec namenode hdfs dfsadmin -safemode leave` |  Safe Mode désactivé |
 | 5 | Copier JAR | `docker cp target/... spark-master:/opt/spark-apps/` |  JAR copié |
 | 6 | Télécharger données | `docker exec namenode hdfs dfs -put ...` |  Données chargées |
